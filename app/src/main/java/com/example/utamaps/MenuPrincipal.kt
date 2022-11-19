@@ -1,7 +1,9 @@
 package com.example.utamaps
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -12,6 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.utamaps.databinding.ActivityMenuPrincipalBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MenuPrincipal : AppCompatActivity() {
 
@@ -36,6 +39,14 @@ class MenuPrincipal : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         //khe
+
+        val fab = findViewById(R.id.fab) as FloatingActionButton
+
+        fab.setOnClickListener(View.OnClickListener() {
+            val Intent = Intent(this, MapaGeneral::class.java)
+            startActivity(Intent)
+        })
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
