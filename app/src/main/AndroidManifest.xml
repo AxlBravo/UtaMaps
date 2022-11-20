@@ -18,6 +18,13 @@
         android:theme="@style/Theme.UtaMaps"
         tools:targetApi="31">
         <activity
+            android:name=".Configuraciones"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
@@ -26,6 +33,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -35,8 +43,6 @@
             android:exported="true"
             android:label="@string/title_activity_menu_principal"
             android:theme="@style/Theme.UtaMaps.NoActionBar">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
