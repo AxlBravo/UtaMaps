@@ -1,9 +1,12 @@
 package com.example.utamaps
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toolbar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -42,10 +45,14 @@ class MenuPrincipal : AppCompatActivity() {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
 
+
+
         fab.setOnClickListener(View.OnClickListener() {
             val Intent = Intent(this, MapaGeneral::class.java)
             startActivity(Intent)
         })
+
+
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -60,6 +67,16 @@ class MenuPrincipal : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_principal, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if(id == R.id.action_settings)
+        {
+            val Intent = Intent(this, Configuraciones::class.java)
+            startActivity(Intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {
