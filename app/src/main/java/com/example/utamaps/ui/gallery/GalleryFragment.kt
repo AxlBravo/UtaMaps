@@ -28,10 +28,6 @@ class GalleryFragment : Fragment() {
         _binding = FragmentDeptosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDeptos
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
