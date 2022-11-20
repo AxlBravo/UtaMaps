@@ -64,6 +64,7 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE)
         enableLocation()
         createMarker()
         //createPolyLines()
@@ -154,14 +155,6 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
         //Departamento de Informática
         val deptoInformatica= LatLng(-18.48916789676081, -70.29522526775676)
         val markerH = mMap.addMarker(MarkerOptions().position(deptoInformatica).title("Departamento de Informática"))
-
-
-        /*
-            .add(aularioC, registraduria)
-            .width(5f)
-            .color(ContextCompat.getColor(this, R.color.black))
-
-        val polyline = mMap.addPolyline(polylineOptions)*/
 
     }
 
