@@ -22,4 +22,10 @@
     <style name="Theme.UtaMaps.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.UtaMaps.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowBackground">@drawable/imagen</item>
+
+</style>
+
 </resources>
