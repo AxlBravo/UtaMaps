@@ -32,7 +32,7 @@
         android:layout_height="24dp"
         android:fontFamily="sans-serif-black"
         android:text="Universidad de Tarapacá sede Sauchache"
-        android:textColor="#FFFEFE"
+        android:textColor="#FFC107"
         android:textSize="16sp"
         android:textStyle="bold"
         android:typeface="normal"
@@ -43,12 +43,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="381dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="4dp"
         android:text="Dentro de sus instalaciones se encuentran la Dirección General Académica, Dirección de Docencia, Extensión y Comunicaciones, Admision y Selección de Alumnos, Registraduria, DIrección de asuntos Estudiantiles, Biblioteca central y otras dependencias."
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -57,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UtaMaps"
-        android:textColor="#FFFFFF"
+        android:textColor="#FF9800"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +83,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Universidad de Tarapacá sede Velásquez"
-        android:textColor="#FFFFFF"
+        android:textColor="#FFC107"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,8 +92,8 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="387dp"
+        android:layout_height="35dp"
         android:text="En el campus se encuentran la Rectoria, la Prorrectoria, el Aula Magna, la mayor parte de la Facultad de Ciencias y el CFT"
         android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="parent"
