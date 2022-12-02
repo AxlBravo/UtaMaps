@@ -128,33 +128,141 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
     }
 
      fun createMarker(){
-        //Aulario C
-        var aularioC = LatLng(-18.49119864947299, -70.29738137069214)
-        var markerB = mMap.addMarker(MarkerOptions().position(aularioC).title("Aulario C"))
 
-        //Departamento de matematicas
-        val deptoMatematicas = LatLng(-18.491765900973082, -70.29676982703793)
-        val markerC = mMap.addMarker(MarkerOptions().position(deptoMatematicas).title("Departamento de matematicas"))
+        var escuelaMedicina = LatLng(-18.49201998031831, -70.29768833560952)
+        var marker01 = mMap.addMarker(MarkerOptions().position(escuelaMedicina).title("Escuela de medicina"))
 
-        //Registraduria
-        val registraduria = LatLng(-18.490354171365787, -70.29657426208078)
-        val markerD = mMap.addMarker(MarkerOptions().position(registraduria).title("Registraduria"))
+        var edificioFacsal3 = LatLng(-18.492556704552847, -70.29717871589669)
+        var marker02 = mMap.addMarker(MarkerOptions().position(edificioFacsal3).title("Edificio Facsal 3"))
 
-        //Biblioteca Central
-        val  bibliotecaCentral= LatLng(-18.490326190161305, -70.29592248528115)
-        val markerE = mMap.addMarker(MarkerOptions().position(bibliotecaCentral).title("Biblioteca Central"))
+        var edificioFacsal2 = LatLng(-18.49250074286322, -70.29687026186)
+        var marker03 = mMap.addMarker(MarkerOptions().position(edificioFacsal2).title("Edificio Facsal 2"))
 
-        //Facultad de Ciencias Sociales y Jurídicas
-        val facSociales = LatLng(-18.488426001426102, -70.29702487318757)
-        val markerF = mMap.addMarker(MarkerOptions().position(facSociales).title("Facultad de Ciencias Sociales y Jurídicas"))
+        var edificioFacsal1CentroSimulacionClinica = LatLng(-18.49219295324348, -70.29683539314279)
+        var marker04 = mMap.addMarker(MarkerOptions().position(edificioFacsal1CentroSimulacionClinica).title("Edificio Facsal 1 y Centro de simulación clinica"))
 
-        //Aulario D
-        val aularioD = LatLng(-18.488554848758422, -70.2967299870205)
-        val markerG = mMap.addMarker(MarkerOptions().position(aularioD).title("Aulario D"))
+        var ratatario = LatLng(-18.4921446225918, -70.29659935874948)
+        var marker05 = mMap.addMarker(MarkerOptions().position(ratatario).title("Ratatario"))
 
-        //Departamento de Informática
-        val deptoInformatica= LatLng(-18.48916789676081, -70.29522526775676)
-        val markerH = mMap.addMarker(MarkerOptions().position(deptoInformatica).title("Departamento de Informática"))
+        var ceinpsi = LatLng(-18.491762981042996, -70.29631605659635)
+        var marker06 = mMap.addMarker(MarkerOptions().position(ceinpsi).title("CEINPSI"))
+
+        var deptoMatematica = LatLng(-18.491786958312865, -70.29679601214598)
+        var marker07 = mMap.addMarker(MarkerOptions().position(deptoMatematica).title("Departamento de matemáticas"))
+
+        var deptoFisica = LatLng(-18.49148679859103, -70.29703741095733)
+        var marker08 = mMap.addMarker(MarkerOptions().position(deptoFisica).title("Departamento de Física"))
+
+        var aularioC = LatLng(-18.491234969267477, -70.29738475702477)
+        var marker09 = mMap.addMarker(MarkerOptions().position(aularioC).title("Aulario C"))
+
+        var aularioA = LatLng(-18.491013664402754, -70.2967316391296)
+        var marker10 = mMap.addMarker(MarkerOptions().position(aularioA).title("Aulario A"))
+
+        var edFisicaAularioOvidioSotoMayor = LatLng(-18.491176463409428, -70.29624750040242)
+        var marker11 = mMap.addMarker(MarkerOptions().position(edFisicaAularioOvidioSotoMayor).title("Educación Física y Aulario Ovidio Sotomayor"))
+
+        var docencia = LatLng(-18.490691881535135, -70.29650767467683)
+        var marker12 = mMap.addMarker(MarkerOptions().position(docencia).title("Docencia"))
+
+        var fotocopiadoraSalasClases = LatLng(-18.490588860011812, -70.29685099743075)
+        var marker13 = mMap.addMarker(MarkerOptions().position(fotocopiadoraSalasClases).title("Fotocopiadoras y Salas de clases"))
+
+        var baniosServicioLogistica = LatLng(-18.490665172252104, -70.29712994716826)
+        var marker14 = mMap.addMarker(MarkerOptions().position(baniosServicioLogistica).title("Baños, Servicios y Logística"))
+
+        var dmz = LatLng(-18.49023019201519, -70.297025341201666)
+        var marker15 = mMap.addMarker(MarkerOptions().position(dmz).title("Direccion de Servicios y Logistica, Direccion de Infraestructura y Equipamiento, Finanzas , Recursos Humanos"))
+
+        var cobranzas = LatLng(-18.490361194950673, -70.29695828579129)
+        var marker16 = mMap.addMarker(MarkerOptions().position(cobranzas).title("Cobranzas"))
+
+        var bodegaDespachoInventario = LatLng(-18.490156423327846, -70.29691000602902)
+        var marker17 = mMap.addMarker(MarkerOptions().position(bodegaDespachoInventario).title("Bodega, Despacho e Inventario"))
+
+        var dirAsuntosEstudiantilesRegistraduriaAdquisiciones = LatLng(-18.49029251381253, -70.29667531274023)
+        var marker18 = mMap.addMarker(MarkerOptions().position(dirAsuntosEstudiantilesRegistraduriaAdquisiciones).title("Direccion de Asuntos Estudiantiles , Registraduria y Adquisiciones"))
+
+        var aularioSigloXXI = LatLng(-18.49013720310249, -70.29635147914402)
+        var marker19 = mMap.addMarker(MarkerOptions().position(aularioSigloXXI).title("AularioSigloXXI/Colina"))
+
+        var veronicaRey = LatLng(-18.490682220513435, -70.29591946107949)
+        var marker20 = mMap.addMarker(MarkerOptions().position(veronicaRey).title("Veronica Rey"))
+
+        var biblioteca = LatLng(-18.4904001837511, -70.29579889789869)
+        var marker21 = mMap.addMarker(MarkerOptions().position(biblioteca).title("Bliblioteca central"))
+
+        var aularioDAntropologia = LatLng(-18.488576144251677, -70.29672760595885)
+        var marker22 = mMap.addMarker(MarkerOptions().position(aularioDAntropologia).title("Aulario D y Antropologia"))
+
+        var facsojurEsun = LatLng(-18.488441324290694, -70.29703337778656)
+        var marker23A = mMap.addMarker(MarkerOptions().position(facsojurEsun).title("Facultad de ciencias sociales y juridicas"))
+
+        var facsojurEsunB = LatLng(-18.48960128125427, -70.29534895052515)
+        var marker23B = mMap.addMarker(MarkerOptions().position(facsojurEsun).title("Esun"))
+
+        var facsojurEsunC = LatLng(-18.489708118999395, -70.2951772891482)
+        var marker23C = mMap.addMarker(MarkerOptions().position(facsojurEsun).title("Esun"))
+
+        var ingElectricaElectronica = LatLng(-18.48954023108477, -70.29501367439829)
+        var marker24 = mMap.addMarker(MarkerOptions().position(ingElectricaElectronica).title("Ingenieria Electrica/Electrónica"))
+
+        var ingIndustrial = LatLng(-18.489353952888514, -70.29532046967594)
+        var marker25 = mMap.addMarker(MarkerOptions().position(ingIndustrial).title("Ingenieria Civil Industrial"))
+
+        var deptoComputacionInformatica = LatLng(-18.489173929600813, -70.29522556891044)
+        var marker26 = mMap.addMarker(MarkerOptions().position(deptoComputacionInformatica).title("Departamento de Ingeniería Civil en Computación e Informatica"))
+
+        var electronicaAntiguo = LatLng(-18.48922931003019, -70.29496203318041)
+        var marker27 = mMap.addMarker(MarkerOptions().position(electronicaAntiguo).title("Electronica antiguo"))
+
+        var electronicaAntiguoB = LatLng(-18.48932675808676, -70.29497278627528)
+        var marker27B = mMap.addMarker(MarkerOptions().position(electronicaAntiguoB).title("Electronica antiguo"))
+
+        var electronicaAntiguoC = LatLng(-18.489140926862465, -70.29508509637732)
+        var marker27C = mMap.addMarker(MarkerOptions().position(electronicaAntiguoC).title("Electronica antiguo"))
+
+        var electronicaAntiguoD = LatLng(-18.489035546871335, -70.29495366966218)
+        var marker27D = mMap.addMarker(MarkerOptions().position(electronicaAntiguoD).title("Electronica antiguo"))
+
+        var electronicaAntiguoE = LatLng(-18.489084270961314, -70.29480193154559)
+        var marker27E = mMap.addMarker(MarkerOptions().position(electronicaAntiguoE).title("Electronica antiguo"))
+
+        var trabajoSocial = LatLng(-18.48898455652978, -70.29506239539923)
+        var marker28 = mMap.addMarker(MarkerOptions().position(trabajoSocial).title("Trabajo Social"))
+
+        var labIntegradoMecanica = LatLng(-18.488745296430412, -70.29567738632329)
+        var marker29 = mMap.addMarker(MarkerOptions().position(labIntegradoMecanica).title("Laboratorio Integrado de Mecánica"))
+
+        var escuelaIngMecanica = LatLng(-18.48827372792267, -70.29531745777247)
+        var marker30 = mMap.addMarker(MarkerOptions().position(escuelaIngMecanica).title("Departamento de Ingenieria Mecánica"))
+
+        var salaEstudio = LatLng(-18.48873952807754, -70.29515632424628)
+        var marker31 = mMap.addMarker(MarkerOptions().position(salaEstudio).title("Sala de estudios"))
+
+        var casino = LatLng(-18.488792947227097, -70.29493370089804)
+        var marker32 = mMap.addMarker(MarkerOptions().position(casino).title("Casino"))
+
+        var ingIndustrial2 = LatLng(-18.488932854444624, -70.29463329348837)
+        var marker33 = mMap.addMarker(MarkerOptions().position(ingIndustrial2).title("Ingenieria industrial"))
+
+        var psicologia = LatLng(-18.48859198938051, -70.29443481002114)
+        var marker34 = mMap.addMarker(MarkerOptions().position(psicologia).title("Psicología"))
+
+        var feuch = LatLng(-18.488500413577974, -70.29479422602915)
+        var marker35 = mMap.addMarker(MarkerOptions().position(feuch).title("FEUCH"))
+
+        var explora = LatLng(-18.488449548881064, -70.29457929995948)
+        var marker36 = mMap.addMarker(MarkerOptions().position(explora).title("Explora"))
+
+        var preUniversitario = LatLng(-18.488349684672784, -70.29471238608228)
+        var marker37 = mMap.addMarker(MarkerOptions().position(preUniversitario).title("Pre-Universitario"))
+
+        var educacionHumanidades = LatLng(-18.48815134307969, -70.2944081892302)
+        var marker38 = mMap.addMarker(MarkerOptions().position(educacionHumanidades).title("Educación y Humanidades"))
+
+        var admisionExtencion = LatLng(-18.48791958956166, -70.29491975102871)
+        var marker39 = mMap.addMarker(MarkerOptions().position(admisionExtencion).title("Admision y Extension"))
 
     }
 
