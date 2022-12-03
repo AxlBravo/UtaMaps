@@ -19,10 +19,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.Polyline
-import com.google.android.gms.maps.model.PolylineOptions
+import com.google.android.gms.maps.model.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -111,7 +108,7 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
     }
 
     private fun drawRoute(routeResponse: RouteResponse?) {
-        val polylineOptions = PolylineOptions()
+        val polylineOptions = PolylineOptions().width(25f).color(ContextCompat.getColor(this, R.color.Poly))
         routeResponse?.features?.first()?.geometry?.coordinates?.forEach{
             polylineOptions.add(LatLng(it[1], it[0]))
         }
@@ -264,6 +261,9 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
         var admisionExtencion = LatLng(-18.48791958956166, -70.29491975102871)
         var marker39 = mMap.addMarker(MarkerOptions().position(admisionExtencion).title("Admision y Extension"))
 
+        var lugar = LatLng(-18.487577128263304, -70.29913669673424)
+        var marker40 = mMap.addMarker(MarkerOptions().position(lugar).visible(true).icon(BitmapDescriptorFactory.fromResource(R.drawable.icons8_house_48)
+        ))
     }
 
     //Funcion para saber si el permiso esta aceptado
