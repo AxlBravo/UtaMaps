@@ -70,7 +70,7 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
 
         btnCalculate = findViewById(R.id.btnCalculateRoute)
         btnCalculate.setOnClickListener{
-            start = ""
+            //start = ""
             end = ""
             poly?.remove()
             poly = null
@@ -78,7 +78,7 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
             if (::mMap.isInitialized){
                 mMap.setOnMapClickListener {
                     if (start.isEmpty()){
-                        start = "${it.longitude}, ${it.latitude}"
+                        //start = "${it.longitude}, ${it.latitude}"
                     }else if(end.isEmpty()){
                         end = "${it.longitude}, ${it.latitude}"
                         createRoute()
@@ -90,9 +90,10 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
 
         //Marcador Universidad de Tarapaca
         val universidad = LatLng(-18.490145119500152, -70.29633263195471)
-        mMap.addMarker(MarkerOptions().position(universidad).title("Universidad de Tarapaca"))
+        mMap.addMarker(MarkerOptions().position(universidad).visible(false))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(universidad))
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(universidad, 18F), 3000, null)
+
 
     }
 
@@ -321,7 +322,8 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
     fun imprimirUbicacion(ubicacion: Location) {
 
         Log.d(LOG_TAG, "Latitud es ${ubicacion.latitude} y la longitud es ${ubicacion.longitude}")
-        Toast.makeText(this,"Tu ubicacion actual es Latitud es ${ubicacion.latitude} y la longitud es ${ubicacion.longitude}",Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,"Tu ubicacion actual es Latitud es ${ubicacion.latitude} y la longitud es ${ubicacion.longitude}",Toast.LENGTH_SHORT).show()
+        start = "${ubicacion.longitude}, ${ubicacion.latitude}"
     }
 
     override fun onMyLocationButtonClick(): Boolean {
