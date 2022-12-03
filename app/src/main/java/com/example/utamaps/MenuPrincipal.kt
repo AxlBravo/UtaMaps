@@ -1,8 +1,10 @@
 package com.example.utamaps
 
 import android.app.ActivityOptions
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -18,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.utamaps.databinding.ActivityMenuPrincipalBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MenuPrincipal : AppCompatActivity() {
 
@@ -27,6 +31,26 @@ class MenuPrincipal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Access a Cloud Firestore instance from your Activity
+
+
+        val db = Firebase.firestore
+
+        // Create a new user with a first and last name
+        val user = hashMapOf(
+            "Nombre" to "Departamento de informatica",
+            "Ubicacion" to "Zona B",
+            "latitud" to 189384,
+            "longitud" to 193830
+        )
+
+        // Add a new document with a generated ID
+        db.collection("Departamentos").add(user).addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
         binding = ActivityMenuPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
