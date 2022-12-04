@@ -57,6 +57,8 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -68,10 +70,16 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
         mMap.setOnMyLocationButtonClickListener(this)
         mMap.setOnMyLocationClickListener(this)
 
+        val bundle = intent.extras
+        val variable = bundle?.getDouble("dir")
+        val variable2 = bundle?.getDouble("dir2")
+
+        end = "${variable2}, ${variable}"
+
         btnCalculate = findViewById(R.id.btnCalculateRoute)
         btnCalculate.setOnClickListener{
             //start = ""
-            end = ""
+            //end = ""
             poly?.remove()
             poly = null
             Toast.makeText(this, "Selecciona un punto de origen y de llegada", Toast.LENGTH_SHORT).show()
@@ -80,10 +88,11 @@ class MapaGeneral : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocat
                     if (start.isEmpty()){
                         //start = "${it.longitude}, ${it.latitude}"
                     }else if(end.isEmpty()){
-                        end = "${it.longitude}, ${it.latitude}"
+                        //end = "${it.longitude}, ${it.latitude}"
                         createRoute()
                     }
                 }
+                createRoute()
             }
         }
 
